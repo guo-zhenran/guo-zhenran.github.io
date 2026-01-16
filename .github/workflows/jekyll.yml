@@ -3,7 +3,7 @@ name: Deploy Jekyll site to GitHub Pages
 on:
   push:
     branches: ["main"]
-  workflow_dispatch:  # 允许手动触发
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -12,7 +12,10 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false  # 改为 false 避免干扰
+  cancel-in-progress: false
+
+env:
+  BUNDLE_VERSION: "2.4.22"  # 明确指定 Bundler 版本
 
 jobs:
   build:
@@ -21,20 +24,32 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1  # 使用稳定的 v1 标签，而不是特定提交
+      - name: Setup Ruby with correct version
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'  # 使用 3.1.x 而不是精确的 3.1.6
+          ruby-version: '3.3'  # 升级到 Ruby 3.3 以兼容 connection_pool
           bundler-cache: true
+          cache-version: 2  # 更改此值以清除旧的缓存
+
+      - name: Install and update Bundler
+        run: |
+          gem install bundler:2.4.22
+          bundle config set --local path vendor/bundle
+
+      - name: Install dependencies
+        run: |
+          # 先尝试不安装 development/test 组
+          bundle config set --local without 'development test'
+          bundle install --jobs 4 --retry 3
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v4
 
       - name: Build with Jekyll
-        # 注意：这里不再使用 --baseurl 参数，让 Jekyll 自己处理
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
+          LC_ALL: "en_US.UTF-8"  # 设置正确的locale
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
