@@ -28,4 +28,4 @@ Hi, welcome to my homepage!
 
 My name is Zhenran Guo and I'm currently an undergraduate student majoring in Economics at School of Economics, Shanghai University of Finance and Econmics. My interst basically lies in the field of behavioral and experimental economics and micro theory.
 
-This homepage is to introduce me and my future research and to display my notes, see CV, research, and notes respectively.
+This homepage is to introduce me and my future research and to display my notes, see CV, Research, and Notes & Resources respectively.

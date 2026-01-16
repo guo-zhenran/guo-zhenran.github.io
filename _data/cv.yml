@@ -7,6 +7,8 @@
       value: Jan. 2006
     - name: Languages
       value: English, Chinese Mandarin
+    - name: E-mail
+      value: guo.zhenran@outlook.com
 
 - title: Education
   type: time_table
@@ -16,7 +18,7 @@
       year: Candidate
       description:
         - "Advisor: <a href=\"https://www.hesimin.com\" target=\"_blank\">Prof. Simin He</a>"
-        - "Overall GPA: 3.89/4.0, ranking 3/158"
+        - "Overall GPA: 3.89/4.0, ranking 2/154"
 
 - title: Honors and Awards
   type: time_table
@@ -27,14 +29,16 @@
         - "<b>First Prize</b>, People’s Scholarship for Outstanding Students (Top 3%)"
         - "Bank of Nanjing Scholarship"
 
-- title: Academic Interests
+- title: Key Courses
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Economics
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - "The Principles of Economics, Thinking and Methods: 97/4.0"
+        - "Principles of Economics: 88/3.7"
+        - "Intermediate Microeconomics: 93/4.0"
+    - title: Quantitative
       items:
-        - Description 1.
-        - Description 2.
+        - "Mathematical Analysis I, II, III: 91/4.0, 93/4.0, 96/4.0, respectively."
+        - "Advanced Algebra I, II: 96/4.0, 99/4.0, respectively."
+        - "Probability Theory and Mathematical Statistics: 91/4.0"
