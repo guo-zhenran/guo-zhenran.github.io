@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: <a href='https://econ.sufe.edu.cn'>School of Economics, Shanghai University of Finance and Econmics</a>
 
