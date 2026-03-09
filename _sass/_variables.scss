@@ -32,9 +32,25 @@ $grey-900: #212529;
 $white-color: #ffffff !default;
 $black-color: #000000 !default;
 
-// Theme colors
+// Custom colors from myPresentation.sty
+$primary-color:   #08457E;  // dark blue
+$secondary-color: #B02A30;  // dark red
+$tertiary-color:  #006400;  // dark green
+$alert-color:     #B22222;  // brick red
+$example-color:   #008B8B;  // dark cyan
+$lightblue-bg:    #E6F0FA;  // light blue background
+$lightgray-bg:    #F5F5F5;  // light gray background
+$medium-gray:     #808080;  // medium gray
+$dark-gray:       #424242;  // dark gray (text color)
 
-$code-bg-color-light: rgba($purple-color, 0.05);
+// Dark mode adjusted colors
+$primary-color-dark: lighten($primary-color, 20%); // approx #3a6ea5
+$alert-color-dark: lighten($alert-color, 15%);     // approx #d65c5c
+$example-color-dark: lighten($example-color, 15%); // approx #1fa3a3
+$secondary-color-dark: lighten($secondary-color, 15%); // approx #d65a5a
+
+// Theme colors
+$code-bg-color-light: rgba($primary-color, 0.05);
 $code-bg-color-dark: #2c3237 !default;
 
 // Font awesome location
