@@ -6,8 +6,7 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Zhenran
 last_name: Guo
 contact_note: >
-  E-mail: guo.zhenran@outlook.com
-  Github: <a href="https://github.com/guo-zhenran" target="_blank">https://github.com/guo-zhenran</a>
+  Please feel free to contact me through e-mail!
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
