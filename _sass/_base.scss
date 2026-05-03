@@ -4,6 +4,19 @@
 
 // Typography
 
+body {
+  font-family: Optima, Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.navbar-brand,
+.post-title,
+.card-title,
+.publications .title {
+  font-family: "Didot";
+}
+
 p,
 h1,
 h2,

@@ -1,62 +1,45 @@
 ---
 layout: page
-title: Notes & Resources  # 页面标题
-permalink: /notes/  # 页面访问路径
-nav: true  # 显示在导航栏
-nav_order: 3  # 导航栏顺序（根据你现有页面调整）
+title: Notes & Resources
+permalink: /notes/
+nav: true
+nav_order: 3
 description: Course notes, study materials, and tex resources.
 
-pdf_downloads:
-  - name: Maths for Economists.pdf  # 显示名称
-    file: assets/pdf/Maths for Economists.pdf  # 文件路径
+resources:
+  - title: Maths for Economists
     description: "This is a handbook of all maths knowledge that economic students need, which contains basics of analysis, algebra, topology and their applications with emphasis on maths foundations of economic theory."
-
-
-github_links:
-  - name: tex code for "Maths for Economists"
-    url: https://github.com/guo-zhenran/Maths-for-Economists
-    description: "See my repository for the tex code."
-
+    pdf:
+      name: Maths for Economists.pdf
+      file: assets/pdf/Maths for Economists.pdf
+    repo:
+      name: tex code
+      url: https://github.com/guo-zhenran/Maths-for-Economists
+      
 ---
 
-<!-- PDF下载部分 -->
-{% if page.pdf_downloads %}
-# PDFs
-<div class="pdf-downloads">
-  {% for pdf in page.pdf_downloads %}
-  <div class="pdf-item">
-    <div class="pdf-icon">
-      <i class="fas fa-file-pdf"></i>
+{% if page.resources %}
+<h1>Notes</h1>
+<div class="resource-cards">
+  {% for item in page.resources %}
+  <div class="resource-card">
+    <div class="card-header">
+      <h3 class="card-title">{{ item.title }}</h3>
+      <div class="card-actions">
+        {% if item.pdf %}
+        <a href="{{ item.pdf.file | relative_url }}" class="action-link pdf-link" target="_blank">
+          <i class="fas fa-file-pdf"></i> PDF
+        </a>
+        {% endif %}
+        {% if item.repo %}
+        <a href="{{ item.repo.url }}" class="action-link repo-link" target="_blank">
+          <i class="fab fa-github"></i> TEX Code
+        </a>
+        {% endif %}
+      </div>
     </div>
-    <div class="pdf-info">
-      <h4>{{ pdf.name }}</h4>
-      <p>{{ pdf.description }}</p>
-      <a href="{{ pdf.file | relative_url }}" class="btn btn-primary btn-sm" target="_blank">
-        <i class="fas fa-download"></i> Download PDF
-      </a>
-    </div>
-  </div>
-  {% endfor %}
-</div>
-{% endif %}
-
-<!-- GitHub链接部分 -->
-{% if page.github_links %}
-# Tex Code Recourses
-<div class="github-links">
-  {% for repo in page.github_links %}
-  <div class="repo-item">
-    <div class="repo-icon">
-      <i class="fab fa-github"></i>
-    </div>
-    <div class="repo-info">
-      <h4>
-      <a href="{{ repo.url }}" target="_blank">{{ repo.name }}</a>
-      </h4>
-      <p>{{ repo.description }}</p>
-      <a href="{{ repo.url }}" class="btn btn-outline-secondary btn-sm" target="_blank">
-        <i class="fab fa-github"></i> View Repository
-      </a>
+    <div class="card-body">
+      <p class="description">{{ item.description }}</p>
     </div>
   </div>
   {% endfor %}
@@ -64,53 +47,97 @@ github_links:
 {% endif %}
 
 <style>
-/* 自定义样式 */
-.pdf-downloads, .github-links {
-  display: flex;
-  flex-direction: column;
+/* 卡片容器：使用 Grid 实现响应式多列布局 */
+.resource-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.5rem;
   margin: 2rem 0;
 }
 
-.pdf-item, .repo-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.5rem;
+/* 单个卡片 */
+.resource-card {
   background: var(--global-bg-color);
-  border: 1px solid var(--global-border-color);
-  border-radius: 8px;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 10px;
+  overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;  /* 确保内容垂直排列 */
 }
 
-.pdf-item:hover, .repo-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+.resource-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
 }
 
-.pdf-icon, .repo-icon {
-  font-size: 1.5rem;
+/* 卡片头部：标题和按钮行，支持换行 */
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: none;
+  flex-wrap: wrap;         /* 宽度不足时按钮换到下一行 */
+  gap: 0.5rem 1rem;        /* 行间距和列间距 */
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: normal;
+  color:#5B7A90;
+  flex: 1 1 auto;          /* 标题尽可能占据剩余空间 */
+}
+
+.card-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;         /* 按钮组内部也可换行 */
+}
+
+.action-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.9rem;
+  color: #5B7A90;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.2s ease;
+  white-space: nowrap;     /* 防止按钮文字换行 */
+}
+
+.action-link i {
+  font-size: 1rem;
+}
+
+.action-link:hover {
   color: var(--global-theme-color);
-  min-width: 40px;
+  text-decoration: underline;
 }
 
-.pdf-info h4, .repo-info h4 {
-  margin: 0 0 0.5rem 0;
-  color: var(--global-text-color);
+.card-body {
+  padding: 1.5rem;          /* 上下左右统一内边距，文字自然居中留白 */
+  flex: 1;
+  display: flex;
+  align-items: center;      /* 如果希望文字块垂直居中，但需配合高度 */
 }
 
-.pdf-info p, .repo-info p {
-  margin: 0 0 1rem 0;
+.description {
+  margin: 0;
   color: var(--global-text-color-light);
+  line-height: 1.5;
+  width: 100%;              /* 保证描述文字占满宽度 */
 }
 
-.btn-primary {
-  background-color: var(--global-theme-color);
-  border-color: var(--global-theme-color);
-}
-
-.btn-primary:hover {
-  background-color: var(--global-hover-color);
-  border-color: var(--global-hover-color);
+/* 小屏幕时调整为单列（保持可读性） */
+@media (max-width: 600px) {
+  .resource-cards {
+    grid-template-columns: 1fr;  /* 单列 */
+  }
 }
 </style>
