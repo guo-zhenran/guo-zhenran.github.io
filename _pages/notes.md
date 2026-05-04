@@ -34,18 +34,16 @@ topics_in_interest:
 # ===== 第三部分：TeX 模板（列表形式，支持 subs 嵌套）=====
 tex_template:
   - title: "My TeX Template"
-    description: "A comprehensive LaTeX template for academic papers, including theorems, proofs, and referencing."
+    description: "A comprehensive LaTeX template for academic needs. Please click the button for tex codes."
     repo: "https://github.com/guo-zhenran/myTemplate"
     subs:
       - title: "myBook"
-        description: "Based on the main template, adapted for book writing."
-        exp: "assets/pdf/myBook_example.pdf"
+        description: 'The template is based on Agni Datta''s <a href="https://www.overleaf.com/latex/templates/preprint-book-manuscript-template/ghrbwppzhzjx" rel="noopener noreferrer">“Preprint Book Manuscript Template”</a>, which I have modified to fit my requirements. The famous <a href="https://github.com/ElegantLaTeX/ElegantLaTeX" rel="noopener noreferrer"> ElegantLaTeX</a> template has also inspired me greatly.'
+        exp: "assets/pdf/exampleBook.pdf"
       - title: "myPresentation"
-        description: "A custom beamer theme for presentations."
-        exp: "assets/pdf/beamer_example.pdf"
+        description: 'Inspired by <a href="https://www.overleaf.com/latex/templates/elegant-slides/yfqyhpprvdmg" rel="noopener noreferrer">“Elegant Slides”</a>, I wrote this minimalistic template with an elegant blue based on Beamer''s template boxes. See the example for customized features of this template.'
+        exp: "assets/pdf/examplePre.pdf"
       - title: "myPaper"
-        description: "A custom beamer theme for presentations."
-        exp: "assets/pdf/beamer_example.pdf"
 ---
 
 {% if page.notes or page.topics_in_interest or page.tex_template %}

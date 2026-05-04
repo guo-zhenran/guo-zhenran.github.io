@@ -2,7 +2,7 @@
 layout: page
 permalink: /research/
 title: Research
-description: Under Construction
+description: My research interest lies in Microeconomic Theory, with a focus on Behavioral and Experimental Economics.
 nav: true
 nav_order: 2
 
@@ -170,7 +170,7 @@ working_in_progress:
 
 <!-- =========  PUBLICATIONS  ========= -->
 {% if page.publications and page.publications.size > 0 %}
-<h2 class="section-title">Publications</h2>
+<h2 class="section-title">Publications (Under Construction)</h2>
 <div class="research-cards">
   {% for pub in page.publications %}
   <div class="research-card">
@@ -217,7 +217,7 @@ working_in_progress:
 
 <!-- =========  WORKING PAPERS  ========= -->
 {% if page.working_papers and page.working_papers.size > 0 %}
-<h2 class="section-title">Working Papers</h2>
+<h2 class="section-title">Working Papers (Under Construction)</h2>
 <div class="research-cards">
   {% for wp in page.working_papers %}
   <div class="research-card">
