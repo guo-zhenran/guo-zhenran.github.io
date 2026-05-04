@@ -30,7 +30,7 @@ working_papers:
 
 working_in_progress:
   - title: "Match to Interact"
-    coauthors: '<a href="http://www.hesimin.com" rel="noopener noreferrer">“Simin He”</a> and <a href="https://sites.google.com/site/jiabinwuecon/home" rel="noopener noreferrer">“Jiabin Wu”</a>'
+    coauthors: '<a href="http://www.hesimin.com" rel="noopener noreferrer">Simin He</a> and <a href="https://sites.google.com/site/jiabinwuecon/home" rel="noopener noreferrer">Jiabin Wu</a>'
 ---
 
 {% if page.publications or page.working_papers or page.working_in_progress %}
