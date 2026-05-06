@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-research",
           title: "Research",
-          description: "My research interest lies in Microeconomic Theory, with a focus on Behavioral and Experimental Economics.",
+          description: "My research interest lies in Microeconomics, with a focus on Micro Theory and Experimental Economics.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/research/";
