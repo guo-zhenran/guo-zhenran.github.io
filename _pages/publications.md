@@ -2,7 +2,7 @@
 layout: page
 permalink: /research/
 title: Research
-description: My research interest lies in Microeconomic Theory, with a focus on Behavioral and Experimental Economics.
+description: My research interest lies in Microeconomics, with a focus on Micro Theory and Experimental Economics.
 nav: true
 nav_order: 2
 

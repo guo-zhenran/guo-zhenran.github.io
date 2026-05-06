@@ -12,7 +12,7 @@ notes:
   - title: "Maths for Economists"
     description: "This is a handbook of all maths knowledge that economic students need, which contains basics of analysis, algebra, topology and their applications with an emphasis on maths foundations of economic theory."
     pdf:
-      name: "Maths for Economists.pdf"
+      name: "Maths for Economists"
       file: "assets/pdf/Maths for Economists.pdf"
     repo:
       name: "tex code"
