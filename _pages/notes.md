@@ -13,7 +13,7 @@ notes:
     description: "This is a handbook of all maths knowledge that economic students need, which contains basics of analysis, algebra, topology and their applications with an emphasis on maths foundations of economic theory."
     pdf:
       name: "Maths for Economists"
-      file: "assets/pdf/Maths for Economists.pdf"
+      file: "assets/pdf/Maths-for-Economists.pdf"
     repo:
       name: "tex code"
       url: "https://github.com/guo-zhenran/Maths-for-Economists"
@@ -23,7 +23,7 @@ topics_in_interest:
   - title: "Coordination"
     reading_list: "assets/bib/Coordination.bib"
     notes: "assets/pdf/deep_learning_notes.pdf"  
-  - title: "Matching (with incomplete information)"
+  - title: "Matching Theory"
     reading_list: "assets/bib/matching_incom_info.bib"
     notes: "assets/pdf/deep_learning_notes.pdf"
   - title: "Cheap Talk"
@@ -256,7 +256,8 @@ tex_template:
 </ul>
 {% endif %}
 
-<!-- ========= 3. TEX TEMPLATE（列表形式，支持 subs 嵌套）========= -->
+<!--
+<!-- ========= 3. TEX TEMPLATE（列表形式，支持 subs 嵌套）========= 
 {% if page.tex_template and page.tex_template.size > 0 %}
 <h2 class="section-title">TeX Templates</h2>
 <ul class="simple-list">
@@ -298,3 +299,4 @@ tex_template:
 {% endif %}
 
 {% endif %}
+-->
