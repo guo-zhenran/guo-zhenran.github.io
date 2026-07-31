@@ -29,6 +29,10 @@ working_papers:
     pre_slides: ""
 
 working_in_progress:
+  - title: ""
+    coauthors: ""
+
+dormant_projects:
   - title: "Match to Interact"
     coauthors: '<a href="http://www.hesimin.com" rel="noopener noreferrer">Simin He</a> and <a href="https://sites.google.com/site/jiabinwuecon/home" rel="noopener noreferrer">Jiabin Wu</a>'
 ---
@@ -268,6 +272,16 @@ working_in_progress:
 <ul class="simple-list">
   {% for wip in page.working_in_progress %}
   <li><strong>{{ wip.title }}</strong> {% if wip.coauthors %} (with {{ wip.coauthors }}).{% endif %}</li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+<!-- =========  WORK IN PROGRESS  ========= -->
+{% if page.dormant_projects and page.dormant_projects.size > 0 %}
+<h2 class="section-title">Dormant Projects</h2>
+<ul class="simple-list">
+  {% for dp in page.dormant_projects %}
+  <li><strong>{{ dp.title }}</strong> {% if dp.coauthors %} (with {{ dp.coauthors }}).{% endif %}</li>
   {% endfor %}
 </ul>
 {% endif %}

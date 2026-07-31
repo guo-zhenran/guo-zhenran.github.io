@@ -16,7 +16,7 @@
       year: Candidate
       description:
         - "Advisor: <a href=\"https://www.hesimin.com\" target=\"_blank\">Prof. Simin He</a>"
-        - "Overall GPA: 3.89/4.0, ranking 2/154"
+        - "Overall GPA: 3.87/4.0, ranking 2/154"
 
 - title: Honors and Awards
   type: time_table
@@ -35,6 +35,9 @@
         - "The Principles of Economics, Thinking and Methods: 97/4.0"
         - "Principles of Economics: 88/3.7"
         - "Intermediate Microeconomics: 93/4.0"
+        - "Intermediate Macroeconomics: 87/3.7"
+        - "Econometrics: 97/4.0"
+        - "Mathematical Economics: 95/4.0"
     - title: Quantitative
       items:
         - "Mathematical Analysis I, II, III: 91/4.0, 93/4.0, 96/4.0, respectively."
