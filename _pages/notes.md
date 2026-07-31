@@ -20,13 +20,13 @@ notes:
 
 # ===== 第二部分：兴趣主题（列表形式，增加 notes PDF 链接）=====
 topics_in_interest:
-  - title: "Coordination"
+  - title: "Behaviral Game Theory"
     reading_list: "assets/bib/Coordination.bib"
     notes: "assets/pdf/deep_learning_notes.pdf"  
   - title: "Matching Theory"
     reading_list: "assets/bib/matching_incom_info.bib"
     notes: "assets/pdf/deep_learning_notes.pdf"
-  - title: "Cheap Talk"
+  - title: "Information Design"
     reading_list: "assets/bib/cheap_talk.bib"
     notes: "assets/pdf/deep_learning_notes.pdf"
   
