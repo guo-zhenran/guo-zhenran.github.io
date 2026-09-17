@@ -40,6 +40,65 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
+    <!-- Recent thoughts -->
+    {% if page.recent_thoughts and page.recent_thoughts.enabled %}
+      <section class="recent-thoughts" aria-labelledby="recent-thoughts-title">
+        <div class="recent-thoughts__header">
+          <div>
+            <div class="recent-thoughts__eyebrow">Ideas &amp; Notes</div>
+            <h2 id="recent-thoughts-title" class="recent-thoughts__title">
+              {{ page.recent_thoughts.title | default: "Recent Thoughts" }}
+            </h2>
+          </div>
+          {% if page.recent_thoughts.intro %}
+            <p class="recent-thoughts__intro">{{ page.recent_thoughts.intro }}</p>
+          {% endif %}
+        </div>
+
+        {% if page.recent_thoughts.items and page.recent_thoughts.items.size > 0 %}
+          <div class="recent-thoughts__grid">
+            {% for thought in page.recent_thoughts.items %}
+              <article class="thought-card">
+                <div class="thought-card__meta">
+                  {% if thought.category %}
+                    <span class="thought-card__category">{{ thought.category }}</span>
+                  {% endif %}
+                  {% if thought.date %}
+                    <time class="thought-card__date">{{ thought.date }}</time>
+                  {% endif %}
+                </div>
+                {% if thought.title %}
+                  <h3 class="thought-card__title">{{ thought.title }}</h3>
+                {% endif %}
+                {% if thought.excerpt %}
+                  <p class="thought-card__excerpt">{{ thought.excerpt }}</p>
+                {% endif %}
+                {% if thought.link %}
+                  {% assign thought_link = thought.link %}
+                  {% unless thought_link contains '://' %}
+                    {% assign thought_link = thought.link | relative_url %}
+                  {% endunless %}
+                  <a
+                    class="thought-card__link"
+                    href="{{ thought_link }}"
+                    {% if thought.link contains '://' %}target="_blank" rel="noopener noreferrer"{% endif %}
+                  >
+                    {{ thought.link_text | default: "Read thought" }}
+                    <span aria-hidden="true">→</span>
+                  </a>
+                {% endif %}
+              </article>
+            {% endfor %}
+          </div>
+        {% else %}
+          <div class="recent-thoughts__empty">
+            <div class="recent-thoughts__empty-mark" aria-hidden="true">✦</div>
+            <p>{{ page.recent_thoughts.empty_text | default: "New notes will appear here soon." }}</p>
+          </div>
+        {% endif %}
+      </section>
+    {% endif %}
+
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>
