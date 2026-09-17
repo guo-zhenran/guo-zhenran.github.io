@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-research",
           title: "Research",
-          description: "My research interest lies in Microeconomics, with a focus on Micro Theory and Experimental Economics.",
+          description: "My research interest lies in Microeconomics, with a focus on Micro Theory and Experimental Economics. Recently, I&#39;ve been particularly interested in information transmission broadly defined, including persuasion, cheap talk, information design and disclosure.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/research/";
@@ -43,13 +43,6 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("mailto:%67%75%6F.%7A%68%65%6E%72%61%6E@%6F%75%74%6C%6F%6F%6B.%63%6F%6D", "_blank");
-        },
-      },{
-        id: 'social-rss',
-        title: 'RSS Feed',
-        section: 'Socials',
-        handler: () => {
-          window.open("/feed.xml", "_blank");
         },
       },{
       id: 'light-theme',
