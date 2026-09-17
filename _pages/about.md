@@ -33,7 +33,7 @@ recent_thoughts:
 
 Hi, welcome to my homepage!
 
-My name is Zhenran Guo and I'm currently an undergraduate student majoring in Economics at School of Economics, Shanghai University of Finance and Economics. My interests basically lie in the field of experimental economics and micro theory. Recently, I've been extremely interested in information transmission broadly defined, including persuasion, cheap talk, information design and disclosure.
+My name is Zhenran Guo and I'm currently an undergraduate student majoring in Economics at School of Economics, Shanghai University of Finance and Economics. My interests basically lie in the field of experimental economics and micro theory. Recently, I've been particularly interested in information transmission broadly defined, including persuasion, cheap talk, information design and disclosure.
 
 I prefer experimental works with a solid theoretical foundation, where the theory tells the fable and the experiment reveals the true world.
 
