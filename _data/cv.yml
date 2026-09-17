@@ -30,6 +30,11 @@
 - title: Key Courses
   type: nested_list
   contents:
+    - title: Ongoing
+      items:
+        - "Advanced Microeconomics III: Ph.D. level, coursework only, instructed by <a href=\"https://sites.google.com/view/hugaoji\" target=\"_blank\">Prof. Gaoji Hu</a>"
+        - "Experimental Economics: instructed by <a href=\"https://ninghua.weebly.com/\"target=\"_blank\">Prof. Ninghua Du</a>"
+        - "Game Theory and Information Economics: instructed by <a href=\"https://sites.google.com/view/huaxiazeng/\" target=\"_blank\">Prof. Huaxia Zeng</a>"
     - title: Economics
       items:
         - "The Principles of Economics, Thinking and Methods: 97/4.0"

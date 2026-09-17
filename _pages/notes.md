@@ -20,13 +20,13 @@ notes:
 
 # ===== 第二部分：兴趣主题（列表形式，增加 notes PDF 链接）=====
 topics_in_interest:
-  - title: "Behaviral Game Theory"
+  - title: "Persuasion"
     reading_list: "assets/bib/Coordination.bib"
     notes: "assets/pdf/deep_learning_notes.pdf"  
   - title: "Matching Theory"
     reading_list: "assets/bib/matching_incom_info.bib"
     notes: "assets/pdf/deep_learning_notes.pdf"
-  - title: "Information Design"
+  - title: "Information/Mechanism Design"
     reading_list: "assets/bib/cheap_talk.bib"
     notes: "assets/pdf/deep_learning_notes.pdf"
   
@@ -37,13 +37,9 @@ tex_template:
     description: "A comprehensive LaTeX template for academic needs. Please click the button for tex codes."
     repo: "https://github.com/guo-zhenran/myTemplate"
     subs:
-      - title: "myBook"
-        description: 'The template is based on Agni Datta''s <a href="https://www.overleaf.com/latex/templates/preprint-book-manuscript-template/ghrbwppzhzjx" rel="noopener noreferrer">“Preprint Book Manuscript Template”</a>, which I have modified to fit my requirements. The famous <a href="https://github.com/ElegantLaTeX/ElegantLaTeX" rel="noopener noreferrer"> ElegantLaTeX</a> template has also inspired me greatly.'
-        exp: "assets/pdf/exampleBook.pdf"
       - title: "myPresentation"
-        description: 'Inspired by <a href="https://www.overleaf.com/latex/templates/elegant-slides/yfqyhpprvdmg" rel="noopener noreferrer">“Elegant Slides”</a>, I wrote this minimalistic template with an elegant blue based on Beamer''s template boxes. See the example for customized features of this template.'
+        description: 'Inspired by <a href="https://www.overleaf.com/latex/templates/elegant-slides/yfqyhpprvdmg" rel="noopener noreferrer">“Elegant Slides”</a>, I wrote this minimalistic template with an elegant blue based on Beamer''s template boxes.'
         exp: "assets/pdf/examplePre.pdf"
-      - title: "myPaper"
 ---
 
 {% if page.notes or page.topics_in_interest or page.tex_template %}
@@ -256,8 +252,8 @@ tex_template:
 </ul>
 {% endif %}
 
-<!--
-<!-- ========= 3. TEX TEMPLATE（列表形式，支持 subs 嵌套）========= 
+
+<!--========= 3. TEX TEMPLATE（列表形式，支持 subs 嵌套）========= --> 
 {% if page.tex_template and page.tex_template.size > 0 %}
 <h2 class="section-title">TeX Templates</h2>
 <ul class="simple-list">
@@ -299,4 +295,3 @@ tex_template:
 {% endif %}
 
 {% endif %}
--->
