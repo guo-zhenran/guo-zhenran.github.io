@@ -23,26 +23,18 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 
-items:
-  - date: "Sep 2026"
-    category: "Research note"
-    title: "Why institutions shape behavior"
-    excerpt: "A short note on how experimental designs can reveal the interaction between institutions and individual decisions."
-    link: "/notes/"
-    link_text: "Read the note"
-
-  - date: "Aug 2026"
-    category: "Reading"
-    title: "Matching and information"
-    excerpt: "Some reflections on market design when agents have incomplete information."
-    link: "https://example.com"
-    link_text: "View source"
+recent_thoughts:
+  enabled: false
+  label: "Recent Thoughts"
+  date: "Sep 2026"
+  text: >-
+    Currently, I'm feeling the anxiety of a tight time budget. To embrace the upcoming application season, I have to work hard on quickly catching up with the research frontier and preparing the wp. This blocks me from writing my own notes, from which I gained much joy through 
 ---
 
 Hi, welcome to my homepage!
 
-My name is Zhenran Guo and I'm currently an undergraduate student majoring in Economics at School of Economics, Shanghai University of Finance and Economics. My interests basically lie in the field of experimental economics and micro theory.Currently, I've benn extremely interested in the generally speaking information transmission, including persuasion, cheap talk and information design.
+My name is Zhenran Guo and I'm currently an undergraduate student majoring in Economics at School of Economics, Shanghai University of Finance and Economics. My interests basically lie in the field of experimental economics and micro theory. Recently, I've been extremely interested in information transmission broadly defined, including persuasion, cheap talk, information design and disclosure.
 
-
+I prefer experimental works with a solid theoretical foundation, where the theory tells the fable and the experiment reveals the true world.
 
 

@@ -54,7 +54,7 @@ tex_template:
 }
 
 .resource-card {
-  background: var(--global-bg-color);
+  background: var(--global-card-bg-color);
   border: 1px solid var(--global-divider-color);
   border-radius: 10px;
   overflow: hidden;
@@ -97,7 +97,7 @@ tex_template:
   border: none;
   padding: 0;
   font-size: 0.9rem;
-  color: #5B7A90;
+  color: var(--global-theme-color);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -111,7 +111,7 @@ tex_template:
 }
 
 .action-link:hover {
-  color: var(--global-theme-color);
+  color: var(--global-hover-color);
   text-decoration: underline;
 }
 
@@ -158,12 +158,12 @@ tex_template:
 }
 
 .list-link a {
-  color: #5B7A90;
+  color: var(--global-theme-color);
   text-decoration: none;
 }
 
 .list-link a:hover {
-  color: var(--global-theme-color);
+  color: var(--global-hover-color);
   text-decoration: underline;
 }
 

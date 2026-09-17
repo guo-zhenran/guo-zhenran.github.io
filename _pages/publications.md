@@ -2,7 +2,7 @@
 layout: page
 permalink: /research/
 title: Research
-description: My research interest lies in Microeconomics, with a focus on Micro Theory and Experimental Economics.
+description: My research interest lies in Microeconomics, with a focus on Micro Theory and Experimental Economics. Recently, I've been particularly interested in information transmission broadly defined, including persuasion, cheap talk, information design and disclosure.
 nav: true
 nav_order: 2
 
@@ -172,8 +172,8 @@ dormant_projects:
 }
 </style>
 
-<!-- =========  PUBLICATIONS  ========= -->
-{% if page.publications and page.publications.size > 0 %}
+<!-- =========  PUBLICATIONS  ========= 
+{% if page.publications and page.publications.size != blank %}
 <h2 class="section-title">Publications (Under Construction)</h2>
 <div class="research-cards">
   {% for pub in page.publications %}
@@ -202,7 +202,7 @@ dormant_projects:
       <div class="abstract-text">{{ pub.abstract }}</div>
       {% endif %}
 
-      <!-- 新增：Presented at 和 Slides -->
+      <!-- 新增：Presented at 和 Slides 
       {% if pub.talked_at or pub.pre_slides %}
       <div class="presented-line">
         {% if pub.talked_at %}Presented at {{ pub.talked_at }}.{% endif %}
@@ -217,10 +217,10 @@ dormant_projects:
   </div>
   {% endfor %}
 </div>
-{% endif %}
+{% endif %} -->
 
-<!-- =========  WORKING PAPERS  ========= -->
-{% if page.working_papers and page.working_papers.size > 0 %}
+<!-- =========  WORKING PAPERS  ========= 
+{% if page.working_papers and page.working_papers.size != blank %}
 <h2 class="section-title">Working Papers (Under Construction)</h2>
 <div class="research-cards">
   {% for wp in page.working_papers %}
@@ -249,7 +249,7 @@ dormant_projects:
       <div class="abstract-text">{{ wp.abstract }}</div>
       {% endif %}
 
-      <!-- 新增：Presented at 和 Slides -->
+      <!-- 新增：Presented at 和 Slides 
       {% if wp.talked_at or wp.pre_slides %}
       <div class="presented-line">
         {% if wp.talked_at %}Presented at {{ wp.talked_at }}.{% endif %}
@@ -266,8 +266,8 @@ dormant_projects:
 </div>
 {% endif %}
 
-<!-- =========  WORK IN PROGRESS  ========= -->
-{% if page.working_in_progress and page.working_in_progress.size > 0 %}
+<!-- =========  WORK IN PROGRESS  ========= 
+{% if page.working_in_progress and page.working_in_progress.size != blank %}
 <h2 class="section-title">Working in Progress</h2>
 <ul class="simple-list">
   {% for wip in page.working_in_progress %}
@@ -276,7 +276,7 @@ dormant_projects:
 </ul>
 {% endif %}
 
-<!-- =========  WORK IN PROGRESS  ========= -->
+<!-- =========  Dormant Projects  ========= -->
 {% if page.dormant_projects and page.dormant_projects.size > 0 %}
 <h2 class="section-title">Dormant Projects</h2>
 <ul class="simple-list">
