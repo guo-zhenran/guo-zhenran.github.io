@@ -4,6 +4,7 @@ title: Misc
 permalink: /misc/
 nav: true
 nav_order: 3
+description: Some personal stuff.
 updated: October 2026
 
 # Reference details are intentionally data-driven so this section can be updated
