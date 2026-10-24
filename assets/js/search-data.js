@@ -23,12 +23,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/research/";
           },
-        },{id: "nav-notes-amp-resources",
-          title: "Notes &amp; Resources",
-          description: "Course notes, study materials, and tex resources.",
+        },{id: "nav-misc",
+          title: "Misc",
+          description: "Some personal stuff.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/notes/";
+            window.location.href = "/misc/";
           },
         },{
         id: 'social-cv',
